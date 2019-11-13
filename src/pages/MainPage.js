@@ -3,7 +3,18 @@ import Footer from "../components/Footer";
 function MainPage() {
 	return (
 		<main>
-			<p>Hello again :D</p>
+			<div class="maincontainer">
+				<div class="websitetitle">
+					<div class="title">
+						<h1>Welcome to Federicoshytte!</h1>
+						<h2>An amazing place to be!</h2>
+					</div>
+				</div>
+				<div class="middlearea"></div>
+				<div class="morememes"></div>
+				<div class="memes"></div>
+			</div>
+
 			<Footer />
 		</main>
 	);

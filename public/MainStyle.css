@@ -2,16 +2,55 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	font-family: "Montserrat", sans-serif;
+	color: white;
 }
 
 body {
-	height: 100%;
+	height: 3000px;
 }
 
 footer {
-	position: absolute;
-	height: 60px;
-	width: 100%;
+	position: fixed;
 	bottom: 0;
-	background-color: blue;
+	height: 40px;
+	width: 100%;
+	background-color: rgb(176, 176, 243);
+	-webkit-box-shadow: -1px 1px 56px -11px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: -1px 1px 56px -11px rgba(0, 0, 0, 0.75);
+	box-shadow: -1px 1px 56px -11px rgba(0, 0, 0, 0.75);
+}
+
+.maincontainer {
+	height: 3000px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 100vh 1fr 1fr;
+	grid-template-areas: "title title" "main morememes" "meme morememes";
+	grid-gap: 5px;
+	background: rgb(22, 29, 84);
+	background: linear-gradient(
+		180deg,
+		rgb(15, 20, 58) 0%,
+		rgb(77, 77, 199) 100%
+	);
+}
+
+/*
+Title CSS
+*/
+.websitetitle {
+	grid-area: title;
+}
+
+.websitetitle . .middlearea {
+	grid-area: main;
+}
+
+.morememes {
+	grid-area: morememes;
+}
+
+.memes {
+	grid-area: meme;
 }
