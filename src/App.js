@@ -1,5 +1,5 @@
 import React from "react";
-
+import Footer from "./components/Footer";
 import {
 	BrowserRouter as Router,
 	Route,
@@ -13,12 +13,15 @@ import MemePage from "./pages/MemePage";
 
 function App() {
 	return (
-		<Router>
-			<Switch>
-				<Route exact path="/" component={MainPage} />
-				<Route exact path="/meme/" component={MemePage} />
-			</Switch>
-		</Router>
+		<div>
+			<Router>
+				<Switch>
+					<Route exact path="/" component={MainPage} />
+					<Route exact path="/meme/" component={MemePage} />
+				</Switch>
+			</Router>
+			<Footer />
+		</div>
 	);
 }
 

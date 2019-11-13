@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Footer from "../components/Footer";
+
 function MainPage() {
 	return (
 		<main>
@@ -10,12 +10,14 @@ function MainPage() {
 						<h2 class="textclip">Welcome faggot</h2>
 					</div>
 				</div>
-				<div class="middlearea"></div>
+				<div class="middlearea">
+					<h2>Welcome to my amazing webpage!</h2>
+					<br />
+					<p>You will never not love this amazing site!</p>
+				</div>
 				<div class="morememes"></div>
 				<div class="memes"></div>
 			</div>
-
-			<Footer />
 		</main>
 	);
 }

@@ -7,7 +7,13 @@
 }
 
 body {
-	height: 3000px;
+	height: 200vh;
+	background: rgb(22, 29, 84);
+	background: linear-gradient(
+		180deg,
+		rgb(15, 20, 58) 0%,
+		rgb(60, 60, 161) 100%
+	);
 }
 
 footer {
@@ -22,18 +28,12 @@ footer {
 }
 
 .maincontainer {
-	height: 3000px;
+	height: 200vh;
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 2fr 1fr;
 	grid-template-rows: 100vh 1fr 1fr;
 	grid-template-areas: "title title" "main morememes" "meme morememes";
 	grid-gap: 5px;
-	background: rgb(22, 29, 84);
-	background: linear-gradient(
-		180deg,
-		rgb(15, 20, 58) 0%,
-		rgb(77, 77, 199) 100%
-	);
 }
 
 /*
@@ -70,8 +70,22 @@ Title CSS
 
 .morememes {
 	grid-area: morememes;
+	background: rgb(22, 29, 84);
+	margin: 40px;
+	margin-bottom: 80px;
+	border-radius: 5px;
+	-webkit-box-shadow: 5px 5px 29px -4px #000000;
+	box-shadow: 5px 5px 29px -4px #000000;
 }
 
 .memes {
 	grid-area: meme;
+	margin: 40px;
+	margin-bottom: 80px;
+}
+
+.middlearea {
+	grid-area: main;
+	margin: 40px;
+	margin-bottom: 80px;
 }
