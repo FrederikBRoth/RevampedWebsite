@@ -3,7 +3,7 @@ import React, { Component } from "react";
 function Footer() {
 	return (
 		<footer>
-			<img src="" alt="menuicon" />
+			<img src="../img/menu.svg" alt="menuicon" />
 		</footer>
 	);
 }
