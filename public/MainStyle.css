@@ -43,12 +43,33 @@ Title CSS
 	grid-area: title;
 }
 
-.websitetitle . .middlearea {
-	grid-area: main;
+.websitetitle .title {
+	position: inherit;
+	padding-top: 42vh;
+
+	margin: 0 auto;
+	text-align: center;
+	font-size: 30px;
+}
+
+.textclip {
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+
+	/* what will show through the text
+        ~ or ~
+       what will be the background of that element */
+	background: whatever;
+
+	/* fallback text color
+        ~ or ~
+       the actual color of text, so it better work on the background */
+	color: red;
 }
 
 .morememes {
 	grid-area: morememes;
+	background-color: ;
 }
 
 .memes {
