@@ -41,35 +41,35 @@ Title CSS
 */
 .websitetitle {
 	grid-area: title;
+	background-image: url(./assets/clipbackground.png);
+	width: 100%;
+	background-size: cover;
 }
 
 .websitetitle .title {
 	position: inherit;
-	padding-top: 42vh;
-
-	margin: 0 auto;
+	margin-top: 36vh;
+	font-size: 50px;
 	text-align: center;
-	font-size: 30px;
+	font-weight: 900;
+	background-color: rgb(22, 29, 84);
 }
 
 .textclip {
-	-webkit-text-fill-color: transparent;
-	-webkit-background-clip: text;
-
 	/* what will show through the text
         ~ or ~
        what will be the background of that element */
-	background: whatever;
+	background: url(./assets/clipbackground.png);
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
 
 	/* fallback text color
         ~ or ~
        the actual color of text, so it better work on the background */
-	color: red;
 }
 
 .morememes {
 	grid-area: morememes;
-	background-color: ;
 }
 
 .memes {

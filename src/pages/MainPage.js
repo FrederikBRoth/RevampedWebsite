@@ -6,8 +6,8 @@ function MainPage() {
 			<div class="maincontainer">
 				<div class="websitetitle">
 					<div class="title">
-						<h1 class="textclip">Welcome to Federicoshytte!</h1>
-						<h2 class="textclip">An amazing place to be!</h2>
+						<h1 class="textclip">FEDERICOSHYTTE</h1>
+						<h2 class="textclip">Welcome faggot</h2>
 					</div>
 				</div>
 				<div class="middlearea"></div>
