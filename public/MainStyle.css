@@ -1,0 +1,17 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	height: 100%;
+}
+
+footer {
+	position: absolute;
+	height: 60px;
+	width: 100%;
+	bottom: 0;
+	background-color: blue;
+}
