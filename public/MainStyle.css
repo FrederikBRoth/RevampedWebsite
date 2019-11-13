@@ -16,6 +16,9 @@ body {
 	);
 }
 
+/*
+Footer CSS
+*/
 footer {
 	position: fixed;
 	bottom: 0;
@@ -25,7 +28,27 @@ footer {
 	-webkit-box-shadow: -1px 1px 56px -11px rgba(0, 0, 0, 0.75);
 	-moz-box-shadow: -1px 1px 56px -11px rgba(0, 0, 0, 0.75);
 	box-shadow: -1px 1px 56px -11px rgba(0, 0, 0, 0.75);
+	padding: 4px;
 }
+
+footer img {
+	height: 100%;
+}
+
+footer label {
+	height: 40px;
+	margin-left: 10px;
+	vertical-align: middle;
+	display: inline-block;
+	color: black;
+	transform: translate(-10%, -8%);
+	font-weight: 500;
+	font-size: 20px;
+}
+
+/*
+Navbar CSS
+*/
 
 .maincontainer {
 	height: 200vh;
@@ -59,6 +82,7 @@ Title CSS
 	/* what will show through the text
         ~ or ~
        what will be the background of that element */
+	position: relative;
 	background: url(./assets/clipbackground.png);
 	-webkit-text-fill-color: transparent;
 	-webkit-background-clip: text;
@@ -70,6 +94,7 @@ Title CSS
 }
 
 .morememes {
+	position: relative;
 	grid-area: morememes;
 	background: rgb(22, 29, 84);
 	margin: 40px;
@@ -80,12 +105,14 @@ Title CSS
 }
 
 .memes {
+	position: relative;
 	grid-area: meme;
 	margin: 40px;
 	margin-bottom: 80px;
 }
 
 .middlearea {
+	position: relative;
 	grid-area: main;
 	margin: 40px;
 	margin-bottom: 80px;
