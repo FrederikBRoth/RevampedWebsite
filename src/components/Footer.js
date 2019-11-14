@@ -19,7 +19,7 @@ function Footer() {
 
 	return (
 		<div>
-			<Navbar />
+			<Navbar handleClick={handleClick} />
 			<footer>
 				<svg
 					className="nav-icon"

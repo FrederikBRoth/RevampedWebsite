@@ -55,13 +55,26 @@ Navbar CSS
 	bottom: -500px;
 	left: 0;
 	height: 500px;
-	width: 300px;
+	width: 250px;
 	background-color: rgb(146, 146, 201);
 	transition: bottom 0.5s;
 }
 
+.linkcontainer {
+	padding: 20px;
+	background-color: rgb(146, 146, 201);
+	transition: background-color 0.3s;
+}
+
+.linkcontainer:hover {
+	background-color: rgb(121, 121, 170);
+}
+
 .navbar-popup p {
-	margin: 30px;
+	color: black;
+	font-weight: 500;
+	font-size: 20px;
+	text-align: center;
 }
 
 .navbar-popup.open-nav {
@@ -85,7 +98,7 @@ Grid Setup
 	height: 200vh;
 	display: grid;
 	grid-template-columns: 2fr 1fr;
-	grid-template-rows: 100vh 1fr 1fr;
+	grid-template-rows: 100vh 2fr 1fr;
 	grid-template-areas: "title title" "main morememes" "meme morememes";
 	grid-gap: 5px;
 }
@@ -129,6 +142,8 @@ Title CSS
 	grid-area: morememes;
 	background: rgb(22, 29, 84);
 	margin: 40px;
+	padding: 20px;
+	text-align: center;
 	margin-bottom: 80px;
 	border-radius: 5px;
 	-webkit-box-shadow: 5px 5px 29px -4px #000000;
