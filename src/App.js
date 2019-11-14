@@ -19,8 +19,8 @@ function App() {
 					<Route exact path="/" component={MainPage} />
 					<Route exact path="/meme/" component={MemePage} />
 				</Switch>
+				<Footer />
 			</Router>
-			<Footer />
 		</div>
 	);
 }

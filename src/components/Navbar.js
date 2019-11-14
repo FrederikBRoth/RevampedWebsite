@@ -1,12 +1,10 @@
 import React, { Component } from "react";
-
+import PageLink from "./PageLink";
 function Navbar() {
 	return (
 		<div className="navbar-popup" id="navbar-popup">
-			<ul>
-				<li>place1</li>
-				<li>place2</li>
-			</ul>
+			<PageLink path="/" text="home" />
+			<PageLink path="/meme/" text="memes" />
 		</div>
 	);
 }

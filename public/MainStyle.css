@@ -31,7 +31,8 @@ footer {
 	padding: 4px;
 }
 
-footer img {
+footer svg {
+	position: relative;
 	height: 100%;
 }
 
@@ -51,16 +52,30 @@ Navbar CSS
 */
 .navbar-popup {
 	position: fixed;
-	bottom: -200px;
+	bottom: -500px;
 	left: 0;
-	height: 200px;
+	height: 500px;
 	width: 300px;
 	background-color: rgb(146, 146, 201);
 	transition: bottom 0.5s;
 }
 
+.navbar-popup p {
+	margin: 30px;
+}
+
 .navbar-popup.open-nav {
 	bottom: 40px;
+}
+
+.nav-icon {
+	stroke: black;
+	stroke-width: 2;
+	transition: stroke 0.3s;
+}
+
+.nav-icon:hover {
+	stroke: rgb(107, 107, 224);
 }
 
 /*
@@ -132,4 +147,5 @@ Title CSS
 	grid-area: main;
 	margin: 40px;
 	margin-bottom: 80px;
+	overflow: auto;
 }
