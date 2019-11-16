@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-
+import React from "react";
+import Questions from "../components/Questions";
 function MainPage() {
 	return (
 		<main>
@@ -47,6 +47,7 @@ function MainPage() {
 				</div>
 				<div className="morememes">
 					<h2>Question of the day!</h2>
+					<Questions />
 				</div>
 				<div className="memes"></div>
 			</div>
