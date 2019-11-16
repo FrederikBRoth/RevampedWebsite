@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import PageLink from "./PageLink";
 function Navbar(props) {
 	return (

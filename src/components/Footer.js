@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import React, { useState } from "react";
 import Navbar from "./Navbar";
 // import styled, { keyframes } from "styled-components";
 // import { fadeIn} from "react-animations";

@@ -137,6 +137,9 @@ Title CSS
        the actual color of text, so it better work on the background */
 }
 
+/*
+Question and Answers CSS
+*/
 .morememes {
 	position: relative;
 	grid-area: morememes;
@@ -148,6 +151,10 @@ Title CSS
 	border-radius: 5px;
 	-webkit-box-shadow: 5px 5px 29px -4px #000000;
 	box-shadow: 5px 5px 29px -4px #000000;
+}
+
+.question {
+	padding: 20px;
 }
 
 .memes {

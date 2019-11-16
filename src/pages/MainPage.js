@@ -1,5 +1,5 @@
 import React from "react";
-import Questions from "../components/Questions";
+import QnA from "../components/QnA";
 function MainPage() {
 	return (
 		<main>
@@ -47,7 +47,7 @@ function MainPage() {
 				</div>
 				<div className="morememes">
 					<h2>Question of the day!</h2>
-					<Questions />
+					<QnA />
 				</div>
 				<div className="memes"></div>
 			</div>
