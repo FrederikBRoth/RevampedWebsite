@@ -45,8 +45,7 @@ function MainPage() {
 						suscipit, convallis orci sed, ultrices ligula.
 					</p>
 				</div>
-				<div className="morememes">
-					<h2>Question of the day!</h2>
+				<div className="qna-area" id="qna-area">
 					<QnA />
 				</div>
 				<div className="memes"></div>

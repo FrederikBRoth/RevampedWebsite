@@ -140,24 +140,73 @@ Title CSS
 /*
 Question and Answers CSS
 */
-.morememes {
+.qna-area {
 	position: relative;
 	grid-area: morememes;
-	background: rgb(22, 29, 84);
+
 	margin: 40px;
-	padding: 20px;
 	text-align: center;
 	margin-bottom: 80px;
-	border-radius: 5px;
 	-webkit-box-shadow: 5px 5px 29px -4px #000000;
 	box-shadow: 5px 5px 29px -4px #000000;
+	z-index: 0;
 }
 
 .question {
-	padding: 20px;
+	position: absolute;
+	width: 100%;
+	overflow: hidden;
+
+	text-align: center;
 }
 
-.memes {
+.question hr {
+	width: 100%;
+}
+.question .question-block {
+	margin: 20px;
+	padding: 20px;
+	background-color: rgb(33, 44, 121);
+}
+
+.question-answers {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background: rgb(22, 29, 84);
+	overflow: hidden;
+	transition: width 0.5s;
+}
+.open-questionmenu {
+	width: 0%;
+}
+
+.question-answers h2,
+button {
+	overflow: hidden;
+}
+
+.questionmenu {
+	position: absolute;
+	background-color: #d98de7;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+}
+
+.questionmenu div {
+	overflow: auto;
+	padding: 20px;
+	transition: background-color 0.3s;
+}
+
+.questionmenu div:hover {
+	background-color: #a569af;
+}
+
+.questionmenu .memes {
 	position: relative;
 	grid-area: meme;
 	margin: 40px;
@@ -168,6 +217,7 @@ Question and Answers CSS
 	position: relative;
 	grid-area: main;
 	margin: 40px;
+	margin-right: 120px;
 	margin-bottom: 80px;
 	overflow: auto;
 }
