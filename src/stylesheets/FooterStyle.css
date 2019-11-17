@@ -1,0 +1,74 @@
+/*
+Footer CSS
+*/
+footer {
+	position: fixed;
+	bottom: 0;
+	height: 40px;
+	width: 100%;
+	background-color: rgb(176, 176, 243);
+	-webkit-box-shadow: -1px 1px 56px -11px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: -1px 1px 56px -11px rgba(0, 0, 0, 0.75);
+	box-shadow: -1px 1px 56px -11px rgba(0, 0, 0, 0.75);
+	padding: 4px;
+}
+
+footer svg {
+	position: relative;
+	height: 100%;
+}
+
+footer label {
+	height: 40px;
+	margin-left: 10px;
+	vertical-align: middle;
+	display: inline-block;
+	color: black;
+	transform: translate(-10%, -8%);
+	font-weight: 500;
+	font-size: 20px;
+}
+
+/*
+Navbar CSS
+*/
+.navbar-popup {
+	position: fixed;
+	bottom: -500px;
+	left: 0;
+	height: 500px;
+	width: 250px;
+	background-color: rgb(146, 146, 201);
+	transition: bottom 0.3s;
+}
+
+.linkcontainer {
+	padding: 20px;
+	background-color: rgb(146, 146, 201);
+	transition: background-color 0.3s;
+}
+
+.linkcontainer:hover {
+	background-color: rgb(121, 121, 170);
+}
+
+.navbar-popup p {
+	color: black;
+	font-weight: 500;
+	font-size: 20px;
+	text-align: center;
+}
+
+.navbar-popup.open-nav {
+	bottom: 40px;
+}
+
+.nav-icon {
+	stroke: black;
+	stroke-width: 2;
+	transition: stroke 0.3s;
+}
+
+.nav-icon:hover {
+	stroke: rgb(107, 107, 224);
+}

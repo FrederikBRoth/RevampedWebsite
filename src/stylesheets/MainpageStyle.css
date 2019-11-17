@@ -1,0 +1,182 @@
+/*
+Grid Setup
+*/
+.maincontainer {
+	height: 200vh;
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	grid-template-rows: 100vh 2fr 1fr;
+	grid-template-areas: "title title" "main morememes" "meme morememes";
+	grid-gap: 5px;
+}
+
+/*
+Title CSS
+*/
+.websitetitle {
+	grid-area: title;
+	background-image: url(./assets/clipbackground.png);
+	width: 100%;
+	background-size: cover;
+}
+
+.websitetitle .title {
+	position: inherit;
+	margin-top: 36vh;
+	font-size: 50px;
+	text-align: center;
+	font-weight: 900;
+	background-color: rgb(22, 29, 84);
+}
+
+.textclip {
+	/* what will show through the text
+        ~ or ~
+       what will be the background of that element */
+	position: relative;
+	background: url(./assets/clipbackground.png);
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+	background-clip: text;
+
+	/* fallback text color
+        ~ or ~
+       the actual color of text, so it better work on the background */
+}
+
+/*
+Question and Answers CSS
+*/
+.qna-area {
+	position: relative;
+	grid-area: morememes;
+
+	margin: 40px;
+	text-align: center;
+	margin-bottom: 80px;
+	-webkit-box-shadow: 5px 5px 29px -4px #000000;
+	box-shadow: 5px 5px 29px -4px #000000;
+	z-index: 0;
+}
+
+.question {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	text-align: center;
+	display: grid;
+	grid-template-rows: 1fr 4fr;
+	grid-template-areas: "question" "answer";
+}
+
+.question hr {
+	width: 100%;
+	background-color: rgb(101, 118, 252);
+}
+.question-block {
+	margin: 20px;
+
+	padding: 20px;
+	background-color: rgb(33, 44, 121);
+}
+
+.question-title {
+	grid-area: question;
+}
+
+.question-icon-container {
+	position: relative;
+	display: inline-block;
+	width: 10%;
+	margin: 10px;
+}
+
+.question-icon {
+	stroke: rgb(255, 255, 255);
+	stroke-width: 2;
+	size: 20%;
+	transition: stroke 0.3s;
+}
+
+.question-icon:hover {
+	stroke: rgb(107, 107, 224);
+}
+
+.question-navbar {
+	text-align: right;
+}
+
+.answers {
+	grid-area: answer;
+	height: 100%;
+	padding-bottom: 20px;
+	overflow: auto;
+}
+
+.answer-block {
+	margin: 0 20px 20px 20px;
+	padding: 20px;
+	background-color: rgb(50, 65, 173);
+}
+
+.answer-info {
+	display: flex;
+	justify-content: space-between;
+}
+
+.answer-info label {
+	color: rgb(101, 118, 252);
+}
+
+.question-answers {
+	position: absolute;
+	overflow: hidden;
+	height: 100%;
+	width: 100%;
+	background: rgb(22, 29, 84);
+	transition: width 0.3s;
+}
+.open-questionmenu {
+	width: 0%;
+}
+
+.question-answers h2,
+button {
+	overflow: hidden;
+}
+
+.questionmenu {
+	position: absolute;
+	background-color: #d98de7;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+}
+
+.questionmenu div {
+	overflow: auto;
+	padding: 20px;
+	transition: background-color 0.3s;
+}
+
+.questionmenu div:hover {
+	background-color: #a569af;
+}
+
+.memes {
+	position: relative;
+	grid-area: meme;
+	margin: 40px;
+	margin-bottom: 80px;
+}
+
+.middlearea {
+	position: relative;
+	grid-area: main;
+	margin: 40px;
+	margin-right: 120px;
+	margin-bottom: 80px;
+	overflow: auto;
+}

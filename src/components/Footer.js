@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Navbar from "./Navbar";
+import "../stylesheets/FooterStyle.css";
 // import styled, { keyframes } from "styled-components";
 // import { fadeIn} from "react-animations";
 
