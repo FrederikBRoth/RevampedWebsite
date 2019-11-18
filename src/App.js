@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Fragment } from "react";
 import Footer from "./components/Footer";
 import {
 	BrowserRouter as Router,
@@ -38,6 +38,12 @@ function App() {
 		}
 		startProgram();
 	}, []);
+
+	const PrivateRoute = props => (
+		<Fragment>
+			{user.loggedIn ? props.children : <Redirect to="/login" />}
+		</Fragment>
+	);
 	return (
 		<div>
 			<Router>
@@ -47,21 +53,17 @@ function App() {
 						path="/"
 						render={props => <MainPage {...props} user={user} />}
 					/>
+
 					<Route
 						exact
-						path="/answerquestion/"
-						render={props => <AnswerPage {...props} user={user} />}
-					/>
-					<Route
-						exact
-						path="/login/"
+						path="/login"
 						render={props => (
 							<LoginPage {...props} user={user} setUser={setUser} />
 						)}
 					/>
 					<Route
 						exact
-						path="/register/"
+						path="/register"
 						render={props => <RegistrationPage {...props} user={user} />}
 					/>
 					<Route
@@ -74,6 +76,13 @@ function App() {
 							);
 						}}
 					/>
+					<PrivateRoute>
+						<Route
+							exact
+							path="/answerquestion"
+							render={props => <AnswerPage {...props} user={user} />}
+						/>
+					</PrivateRoute>
 					<Redirect to="/404" />
 				</Switch>
 				<Footer

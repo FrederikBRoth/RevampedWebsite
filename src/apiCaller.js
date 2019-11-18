@@ -68,6 +68,19 @@ export async function Logout() {
 	return data;
 }
 
-export async function PostAnswer() {
-	return "rofl";
+export async function PostAnswer(answer, sender, questionId) {
+	let response = await fetch(apiPath + "/api/qna/postanswer", {
+		method: "post",
+		headers: postHeader,
+		body: JSON.stringify({
+			answer,
+			sender,
+			questionId
+		})
+	});
+	if (!response.ok) {
+		throw new Error(response.statusText);
+	}
+	let data = await response.text();
+	return data;
 }

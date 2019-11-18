@@ -2,10 +2,11 @@ import React, { useState, useEffect } from "react";
 import { AllQuestions, PostAnswer } from "../apiCaller";
 import { Link } from "react-router-dom";
 
-function AnswerPage() {
+function AnswerPage(props) {
 	const [questions, setQuestions] = useState([]);
 	const [currentQuestion, setCurrentQuestion] = useState({});
 	const [answer, setAnswer] = useState("");
+	const [errorMessage, setErrorMessage] = useState("");
 
 	function handleChange(event) {
 		const { value, name } = event.target;
@@ -21,7 +22,20 @@ function AnswerPage() {
 		answerwindow.classList.toggle("move-answerwindow");
 	}
 
-	function handleAnswer() {}
+	async function handleAnswer(event) {
+		event.preventDefault();
+		try {
+			const data = await PostAnswer(
+				answer,
+				props.user.username,
+				currentQuestion._id
+			);
+			setErrorMessage("Answer submitted successfully!");
+			setAnswer("");
+		} catch (error) {
+			setErrorMessage(error.message);
+		}
+	}
 
 	useEffect(() => {
 		async function getQuestions() {
@@ -68,7 +82,7 @@ function AnswerPage() {
 						<button name="login" onClick={handleAnswer}>
 							Post Answer!
 						</button>
-
+						<label>{errorMessage}</label>
 						<Link to="/">
 							<button name="login">Go back</button>
 						</Link>
