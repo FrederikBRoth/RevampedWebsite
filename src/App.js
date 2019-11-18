@@ -15,8 +15,9 @@ import RegistrationPage from "./pages/RegistrationPage";
 function App() {
 	const [user, setUser] = useState({ username: null, loggedIn: false });
 
-	function checkloggedIn() {
+	function checkLoggedIn() {
 		if (user !== undefined && user.loggedIn === true) {
+			console.log("logged in");
 			return true;
 		} else {
 			return false;
@@ -60,7 +61,7 @@ function App() {
 					/>
 					<Redirect to="/404" />
 				</Switch>
-				<Footer user={user} setUser={setUser} checkloggedIn={checkloggedIn} />
+				<Footer user={user} setUser={setUser} checkLoggedIn={checkLoggedIn} />
 			</Router>
 		</div>
 	);

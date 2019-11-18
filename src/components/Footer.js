@@ -34,13 +34,16 @@ function Footer(props) {
 					</svg>
 					<label>Menu</label>
 				</div>
-				{}
-				<div className="footer-right">
-					<label>Login</label>
-				</div>
-				<div className="footer-right">
-					<label>Logout</label>
-				</div>
+				{!props.checkLoggedIn() ? (
+					<div className="footer-right">
+						<label>Login</label>
+					</div>
+				) : (
+					<div className="footer-right" onClick={() => props.setUser({})}>
+						<label>{props.user.username}</label>
+						<label>Logout</label>
+					</div>
+				)}
 			</footer>
 		</div>
 	);
