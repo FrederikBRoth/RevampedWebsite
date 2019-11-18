@@ -9,12 +9,6 @@ function Navbar(props) {
 				text="Answer Questions"
 				handleClick={props.handleClick}
 			/>
-			<PageLink path="/login/" text="Login" handleClick={props.handleClick} />
-			<PageLink
-				path="/register/"
-				text="Register"
-				handleClick={props.handleClick}
-			/>
 		</div>
 	);
 }

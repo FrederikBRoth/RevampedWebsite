@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Navbar from "./Navbar";
+import { Link } from "react-router-dom";
 import "../stylesheets/FooterStyle.css";
 // import styled, { keyframes } from "styled-components";
 // import { fadeIn} from "react-animations";
@@ -34,9 +35,11 @@ function Footer(props) {
 					<label>Menu</label>
 				</div>
 				{!props.checkLoggedIn() ? (
-					<div className="footer-right">
-						<label>Login</label>
-					</div>
+					<Link to="/login">
+						<div className="footer-right">
+							<label>Login</label>
+						</div>
+					</Link>
 				) : (
 					<div className="footer-right" onClick={() => props.logoutUser()}>
 						<label>{props.user.username}</label>
