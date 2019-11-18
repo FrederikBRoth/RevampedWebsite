@@ -1,26 +1,30 @@
-.login-register-container {
-	position: inherit;
-	height: 100%;
-	text-align: center;
-	padding-top: 5%;
-}
+/*
+Login and Register CSS
+*/
 
 .login-register-form {
-	display: inline-block;
-	height: 100%;
+	position: absolute;
+	height: 70%;
 	width: 40%;
-	padding: 10px;
+	left: 50%;
+	top: 40%;
+	transform: translate(-50%, -40%);
 	overflow: auto;
 	background-color: rgb(22, 29, 84);
 	-webkit-box-shadow: 5px 5px 29px -4px #000000;
 	box-shadow: 5px 5px 29px -4px #000000;
-	padding: 5% 0 5% 0;
+	padding: 20px;
+	text-align: center;
+	transition: left 0.3s;
 }
-
+.move-answerwindow {
+	left: 35%;
+}
 .login-register-inputs {
-	position: inherit;
+	position: relative;
 	align-items: center;
 	padding-top: 50px;
+	background-color: rgb(22, 29, 84);
 }
 
 .login-register-inputs input {
@@ -52,4 +56,39 @@
 
 .login-register-buttons button:hover {
 	background-color: #a569af;
+}
+/*
+Submit Answer CSS
+*/
+.post-questionmenu {
+	position: absolute;
+	height: 70%;
+	width: 20%;
+	left: 50%;
+	top: 40%;
+	background-color: #d98de7;
+	transform: translate(-50%, -40%);
+	overflow: auto;
+	transition: left 0.3s;
+}
+
+.open-postquestionmenu {
+	left: 65%;
+}
+
+.post-questionmenu div {
+	overflow: auto;
+	padding: 20px;
+	transition: background-color 0.3s;
+}
+
+.post-questionmenu div:hover {
+	background-color: #a569af;
+}
+
+.answer-area {
+	width: 75%;
+	height: 25vh;
+	border: 0;
+	background-color: rgb(33, 44, 121);
 }

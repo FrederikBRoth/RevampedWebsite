@@ -67,3 +67,7 @@ export async function Logout() {
 	let data = response.text();
 	return data;
 }
+
+export async function PostAnswer() {
+	return "rofl";
+}
