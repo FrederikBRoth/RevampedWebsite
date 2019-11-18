@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, Redirect } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "../stylesheets/LoginRegisterStyle.css";
 import { Register } from "../apiCaller";
 function RegistrationPage() {
@@ -40,7 +40,7 @@ function RegistrationPage() {
 		if (samePassword()) {
 			try {
 				event.preventDefault();
-				const data = await Register(username, password, email);
+				await Register(username, password, email);
 			} catch (error) {
 				setErrorMessage(error.message);
 			}

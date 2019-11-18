@@ -48,3 +48,22 @@ export async function Register(username, password, email) {
 	let data = await response.text();
 	return data;
 }
+
+export async function CheckSession() {
+	let response = await fetch(
+		"https://federicoshytte.dk/api/account/checklogin",
+		{
+			credentials: "include"
+		}
+	);
+	let data = await response.json();
+	return data;
+}
+
+export async function Logout() {
+	let response = await fetch("https://federicoshytte.dk/api/account/logout", {
+		credentials: "include"
+	});
+	let data = response.text();
+	return data;
+}

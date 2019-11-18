@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Footer from "./components/Footer";
 import {
 	BrowserRouter as Router,
@@ -11,6 +11,7 @@ import MainPage from "./pages/MainPage";
 import AnswerPage from "./pages/AnswerPage";
 import LoginPage from "./pages/LoginPage";
 import RegistrationPage from "./pages/RegistrationPage";
+import { CheckSession, Logout } from "./apiCaller";
 
 function App() {
 	const [user, setUser] = useState({ username: null, loggedIn: false });
@@ -23,6 +24,20 @@ function App() {
 			return false;
 		}
 	}
+
+	async function logoutUser() {
+		await Logout();
+		const data = await CheckSession();
+		setUser(data);
+	}
+
+	useEffect(() => {
+		async function startProgram() {
+			const data = await CheckSession();
+			setUser(data);
+		}
+		startProgram();
+	}, []);
 	return (
 		<div>
 			<Router>
@@ -61,7 +76,12 @@ function App() {
 					/>
 					<Redirect to="/404" />
 				</Switch>
-				<Footer user={user} setUser={setUser} checkLoggedIn={checkLoggedIn} />
+				<Footer
+					user={user}
+					setUser={setUser}
+					checkLoggedIn={checkLoggedIn}
+					logoutUser={logoutUser}
+				/>
 			</Router>
 		</div>
 	);

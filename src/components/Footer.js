@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Navbar from "./Navbar";
 import "../stylesheets/FooterStyle.css";
-import { userInfo } from "os";
 // import styled, { keyframes } from "styled-components";
 // import { fadeIn} from "react-animations";
 
@@ -39,7 +38,7 @@ function Footer(props) {
 						<label>Login</label>
 					</div>
 				) : (
-					<div className="footer-right" onClick={() => props.setUser({})}>
+					<div className="footer-right" onClick={() => props.logoutUser()}>
 						<label>{props.user.username}</label>
 						<label>Logout</label>
 					</div>
