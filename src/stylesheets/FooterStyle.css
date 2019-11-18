@@ -11,20 +11,42 @@ footer {
 	-moz-box-shadow: -1px 1px 56px -11px rgba(0, 0, 0, 0.75);
 	box-shadow: -1px 1px 56px -11px rgba(0, 0, 0, 0.75);
 	padding: 4px;
+	display: flex;
+	justify-content: space-between;
 }
 
-footer svg {
+.footer-left {
+	height: 100%;
+}
+
+.footer-left svg {
 	position: relative;
 	height: 100%;
 }
 
-footer label {
+.footer-left label {
 	height: 40px;
 	margin-left: 10px;
 	vertical-align: middle;
 	display: inline-block;
 	color: black;
 	transform: translate(-10%, -8%);
+	font-weight: 500;
+	font-size: 20px;
+}
+
+.footer-right {
+	height: 100%;
+}
+
+.footer-right label {
+	height: 40px;
+	margin-right: 10px;
+	margin-top: 3px;
+	vertical-align: middle;
+	display: inline-block;
+	color: black;
+
 	font-weight: 500;
 	font-size: 20px;
 }

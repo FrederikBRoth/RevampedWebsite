@@ -1,4 +1,55 @@
-.login-register {
+.login-register-container {
+	position: inherit;
 	height: 100%;
-	background-color: black;
+	text-align: center;
+	padding-top: 5%;
+}
+
+.login-register-form {
+	display: inline-block;
+	height: 100%;
+	width: 40%;
+	padding: 10px;
+	overflow: auto;
+	background-color: rgb(22, 29, 84);
+	-webkit-box-shadow: 5px 5px 29px -4px #000000;
+	box-shadow: 5px 5px 29px -4px #000000;
+	padding: 5% 0 5% 0;
+}
+
+.login-register-inputs {
+	position: inherit;
+	align-items: center;
+	padding-top: 50px;
+}
+
+.login-register-inputs input {
+	display: inline-block;
+	width: 75%;
+	border: 0;
+	margin: 20px 10px 20px 10px;
+	padding: 10px;
+	background-color: rgb(33, 44, 121);
+}
+
+.login-register-buttons {
+	display: flex;
+	margin: 15px 12.5% 0% 12.5%;
+	justify-content: space-between;
+}
+
+.login-register-buttons label {
+	width: 50%;
+}
+
+.login-register-buttons button {
+	padding: 10px 20px 10px 20px;
+	border: 0;
+	height: 5vh;
+	background-color: #d98de7;
+	transition: background-color 0.2s;
+}
+
+.login-register-buttons button:hover {
+	background-color: #a569af;
 }

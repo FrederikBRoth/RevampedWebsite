@@ -13,7 +13,15 @@ import LoginPage from "./pages/LoginPage";
 import RegistrationPage from "./pages/RegistrationPage";
 
 function App() {
-	const [loggedIn, setLoggedIn] = useState();
+	const [user, setUser] = useState({ username: null, loggedIn: false });
+
+	function checkloggedIn() {
+		if (user !== undefined && user.loggedIn === true) {
+			return true;
+		} else {
+			return false;
+		}
+	}
 	return (
 		<div>
 			<Router>
@@ -21,24 +29,24 @@ function App() {
 					<Route
 						exact
 						path="/"
-						render={props => <MainPage {...props} loggedIn={loggedIn} />}
+						render={props => <MainPage {...props} user={user} />}
 					/>
 					<Route
 						exact
 						path="/answerquestion/"
-						render={props => <AnswerPage {...props} loggedIn={loggedIn} />}
+						render={props => <AnswerPage {...props} user={user} />}
 					/>
 					<Route
 						exact
 						path="/login/"
-						render={props => <LoginPage {...props} loggedIn={loggedIn} />}
+						render={props => (
+							<LoginPage {...props} user={user} setUser={setUser} />
+						)}
 					/>
 					<Route
 						exact
 						path="/register/"
-						render={props => (
-							<RegistrationPage {...props} loggedIn={loggedIn} />
-						)}
+						render={props => <RegistrationPage {...props} user={user} />}
 					/>
 					<Route
 						path="/404"
@@ -52,7 +60,7 @@ function App() {
 					/>
 					<Redirect to="/404" />
 				</Switch>
-				<Footer />
+				<Footer user={user} setUser={setUser} checkloggedIn={checkloggedIn} />
 			</Router>
 		</div>
 	);

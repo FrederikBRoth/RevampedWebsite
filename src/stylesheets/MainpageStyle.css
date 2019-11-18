@@ -10,39 +10,9 @@ Grid Setup
 	grid-gap: 5px;
 }
 
-/*
-Title CSS
-*/
-.websitetitle {
-	grid-area: title;
-	background-image: url(./assets/clipbackground.png);
-	width: 100%;
-	background-size: cover;
-}
-
-.websitetitle .title {
-	position: inherit;
-	margin-top: 36vh;
-	font-size: 50px;
-	text-align: center;
-	font-weight: 900;
-	background-color: rgb(22, 29, 84);
-}
-
-.textclip {
-	/* what will show through the text
-        ~ or ~
-       what will be the background of that element */
-	position: relative;
-	background: url(./assets/clipbackground.png);
-	-webkit-text-fill-color: transparent;
-	-webkit-background-clip: text;
-	background-clip: text;
-
-	/* fallback text color
+/* fallback text color
         ~ or ~
        the actual color of text, so it better work on the background */
-}
 
 /*
 Question and Answers CSS
