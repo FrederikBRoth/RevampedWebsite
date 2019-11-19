@@ -30,6 +30,7 @@ function AnswerPage(props) {
 				props.user.username,
 				currentQuestion._id
 			);
+			console.log(data);
 			setErrorMessage("Answer submitted successfully!");
 			setAnswer("");
 		} catch (error) {

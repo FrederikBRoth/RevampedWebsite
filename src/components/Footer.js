@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import Navbar from "./Navbar";
 import { Link } from "react-router-dom";
 import "../stylesheets/FooterStyle.css";
+
+import CustomPlayer from "./CustomPlayer";
 // import styled, { keyframes } from "styled-components";
 // import { fadeIn} from "react-animations";
 
@@ -20,8 +22,18 @@ function Footer(props) {
 	}
 
 	return (
-		<div>
+		<div classname="footercontainer">
 			<Navbar handleClick={handleClick} />
+			<div className="soundcloud-embed" id="soundcloud-embed">
+				<iframe
+					id="sc-widget"
+					title="soundcloud"
+					scrolling="no"
+					frameBorder="no"
+					allow="autoplay"
+					src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/398571716&color=d98de7&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=false&visual=true"
+				></iframe>
+			</div>
 			<footer>
 				<div className="footer-left">
 					<svg
@@ -34,6 +46,12 @@ function Footer(props) {
 					</svg>
 					<label>Menu</label>
 				</div>
+
+				{/* <button onClick={handleWidgetClick}>open</button>
+					<button onClick={() => widget.current.play()}>play</button>
+					<button onClick={() => widget.current.pause()}>pause</button> */}
+				<CustomPlayer />
+
 				{!props.checkLoggedIn() ? (
 					<Link to="/login">
 						<div className="footer-right">

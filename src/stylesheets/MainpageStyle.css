@@ -5,7 +5,7 @@ Grid Setup
 	height: 200vh;
 	display: grid;
 	grid-template-columns: 2fr 1fr;
-	grid-template-rows: 100vh 2fr 1fr;
+	grid-template-rows: 100vh 1.5fr 1fr;
 	grid-template-areas: "title title" "main morememes" "meme morememes";
 	grid-gap: 5px;
 }
@@ -135,18 +135,10 @@ button {
 	background-color: #a569af;
 }
 
-.memes {
-	position: relative;
-	grid-area: meme;
-	margin: 40px;
-	margin-bottom: 80px;
-}
-
 .middlearea {
 	position: relative;
 	grid-area: main;
 	margin: 40px;
-	margin-right: 120px;
-	margin-bottom: 80px;
+
 	overflow: auto;
 }

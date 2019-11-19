@@ -38,7 +38,6 @@ function MainPage() {
 				<div className="qna-area" id="qna-area">
 					<QnA />
 				</div>
-				<div className="memes"></div>
 			</div>
 		</main>
 	);

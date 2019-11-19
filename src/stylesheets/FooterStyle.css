@@ -1,6 +1,9 @@
 /*
 Footer CSS
 */
+
+.footercontainer {
+}
 footer {
 	position: fixed;
 	bottom: 0;
@@ -37,11 +40,17 @@ footer {
 
 .footer-right {
 	height: 100%;
+	transition: background-color 0.3s;
+}
+
+.footer-right:hover {
+	background-color: rgb(107, 107, 224);
 }
 
 .footer-right label {
 	height: 40px;
 	margin-right: 10px;
+	margin-left: 10px;
 	margin-top: 3px;
 	vertical-align: middle;
 	display: inline-block;
@@ -93,4 +102,48 @@ Navbar CSS
 
 .nav-icon:hover {
 	stroke: rgb(107, 107, 224);
+}
+
+/*
+Souncloud Widget CSS
+*/
+.soundcloud-embed {
+	position: fixed;
+	left: 50%;
+	bottom: -300px;
+	transform: translate(-50%);
+	height: 300px;
+	color: #d98de7;
+	transition: bottom 0.3s;
+}
+.open-soundcloud {
+	bottom: 40px;
+}
+
+.audio-controller {
+	display: inline-block;
+	height: 100%;
+}
+.playpause {
+	display: inline-block;
+
+	height: 100%;
+}
+
+.audio-controller label {
+	height: 40px;
+	margin-right: 10px;
+	margin-left: 10px;
+	margin-top: 3px;
+	vertical-align: middle;
+	display: inline-block;
+	color: black;
+
+	font-weight: 500;
+	font-size: 20px;
+}
+.audio-button {
+	position: relative;
+	margin-left: -10px;
+	height: 100%;
 }

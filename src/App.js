@@ -76,14 +76,15 @@ function App() {
 							);
 						}}
 					/>
+
 					<PrivateRoute>
 						<Route
 							exact
 							path="/answerquestion"
 							render={props => <AnswerPage {...props} user={user} />}
 						/>
+						<Redirect to="/404" />
 					</PrivateRoute>
-					<Redirect to="/404" />
 				</Switch>
 				<Footer
 					user={user}
