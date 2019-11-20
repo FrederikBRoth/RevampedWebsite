@@ -66,6 +66,14 @@ function App() {
 						path="/register"
 						render={props => <RegistrationPage {...props} user={user} />}
 					/>
+
+					<PrivateRoute>
+						<Route
+							exact
+							path="/answerquestion"
+							render={props => <AnswerPage {...props} user={user} />}
+						/>
+					</PrivateRoute>
 					<Route
 						path="/404"
 						render={() => {
@@ -76,15 +84,6 @@ function App() {
 							);
 						}}
 					/>
-
-					<PrivateRoute>
-						<Route
-							exact
-							path="/answerquestion"
-							render={props => <AnswerPage {...props} user={user} />}
-						/>
-						<Redirect to="/404" />
-					</PrivateRoute>
 				</Switch>
 				<Footer
 					user={user}

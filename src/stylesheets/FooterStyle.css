@@ -113,37 +113,74 @@ Souncloud Widget CSS
 	bottom: -300px;
 	transform: translate(-50%);
 	height: 300px;
+	width: 50%;
 	color: #d98de7;
 	transition: bottom 0.3s;
+}
+#sc-widget {
+	position: relative;
+	height: 100%;
+	width: 100%;
 }
 .open-soundcloud {
 	bottom: 40px;
 }
 
 .audio-controller {
-	display: inline-block;
+	position: relative;
 	height: 100%;
+	transform: translate(0, -5%);
 }
+
 .playpause {
 	display: inline-block;
+	width: 40px;
+	height: 100%;
+}
+
+.audio-button {
+	position: relative;
 
 	height: 100%;
 }
 
-.audio-controller label {
-	height: 40px;
-	margin-right: 10px;
-	margin-left: 10px;
-	margin-top: 3px;
-	vertical-align: middle;
+.song-info {
+	position: relative;
 	display: inline-block;
+	transform: translate(0, -8%);
+	width: 200px;
+	height: 100%;
+}
+
+.song-info label {
 	color: black;
 
 	font-weight: 500;
-	font-size: 20px;
+	font-size: 10px;
 }
-.audio-button {
-	position: relative;
-	margin-left: -10px;
-	height: 100%;
+
+.song-info progress {
+	display: block;
+}
+
+.song-duration {
+	display: flex;
+	justify-content: space-between;
+}
+progress {
+	-webkit-appearance: none;
+	appearance: none;
+	background-color: rgb(107, 107, 224);
+	width: 100%;
+	color: rgb(107, 107, 224);
+	height: 5px;
+}
+progress::-webkit-progress-bar {
+	background-color: rgb(138, 138, 231);
+	border-radius: 2px;
+	border: 1px solid lighten(rgb(107, 107, 224), 20%);
+	color: rgb(107, 107, 224);
+}
+progress::-webkit-progress-value {
+	background-color: rgb(107, 107, 224);
 }

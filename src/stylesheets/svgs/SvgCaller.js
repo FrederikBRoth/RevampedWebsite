@@ -7,7 +7,10 @@ export const PlayButton = props => {
 			version="1.1"
 			id="svg8"
 			className="audio-button"
-			onClick={props.play}
+			onClick={() => {
+				props.play();
+				props.handlePlayButton();
+			}}
 		>
 			<path
 				id="path815"
@@ -19,7 +22,14 @@ export const PlayButton = props => {
 
 export const PauseButton = props => {
 	return (
-		<svg className="audio-button" viewBox="0 0 42 42" onClick={props.pause}>
+		<svg
+			className="audio-button"
+			viewBox="0 0 42 42"
+			onClick={() => {
+				props.pause();
+				props.handlePlayButton();
+			}}
+		>
 			<path d="M14.5,0c-0.552,0-1,0.447-1,1v40c0,0.553,0.448,1,1,1s1-0.447,1-1V1C15.5,0.447,15.052,0,14.5,0z" />
 			<path d="M27.5,0c-0.552,0-1,0.447-1,1v40c0,0.553,0.448,1,1,1s1-0.447,1-1V1C28.5,0.447,28.052,0,27.5,0z" />
 		</svg>

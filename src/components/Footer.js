@@ -26,12 +26,12 @@ function Footer(props) {
 			<Navbar handleClick={handleClick} />
 			<div className="soundcloud-embed" id="soundcloud-embed">
 				<iframe
+					title="fuck"
 					id="sc-widget"
-					title="soundcloud"
 					scrolling="no"
-					frameBorder="no"
+					frameborder="no"
 					allow="autoplay"
-					src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/398571716&color=d98de7&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=false&visual=true"
+					src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/928173397&color=%23e800fc&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
 				></iframe>
 			</div>
 			<footer>
