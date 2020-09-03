@@ -5,19 +5,19 @@ const postHeader = {
 };
 
 export async function AllQuestions() {
-	let response = await fetch(apiPath + "/api/qna/getquestions");
+	let response = await fetch("/api/qna/getquestions");
 	let data = await response.json();
 	return data;
 }
 
 export async function AllAnswers() {
-	let response = await fetch(apiPath + "/api/qna/getanswers");
+	let response = await fetch("/api/qna/getanswers");
 	let data = await response.json();
 	return data;
 }
 
 export async function Login(username, password) {
-	let response = await fetch(apiPath + "/api/account/login", {
+	let response = await fetch("/api/account/login", {
 		method: "post",
 		headers: postHeader,
 		body: JSON.stringify({
@@ -33,7 +33,7 @@ export async function Login(username, password) {
 }
 
 export async function Register(username, password, email) {
-	let response = await fetch(apiPath + "/api/account/register", {
+	let response = await fetch("/api/account/register", {
 		method: "post",
 		headers: postHeader,
 		body: JSON.stringify({
@@ -51,7 +51,7 @@ export async function Register(username, password, email) {
 
 export async function CheckSession() {
 	let response = await fetch(
-		"https://federicoshytte.dk/api/account/checklogin",
+		"/api/account/checklogin",
 		{
 			credentials: "include"
 		}
@@ -61,7 +61,7 @@ export async function CheckSession() {
 }
 
 export async function Logout() {
-	let response = await fetch("https://federicoshytte.dk/api/account/logout", {
+	let response = await fetch("/api/account/logout", {
 		credentials: "include"
 	});
 	let data = response.text();
@@ -69,7 +69,7 @@ export async function Logout() {
 }
 
 export async function PostAnswer(answer, sender, questionId) {
-	let response = await fetch(apiPath + "/api/qna/postanswer", {
+	let response = await fetch("/api/qna/postanswer", {
 		method: "post",
 		headers: postHeader,
 		body: JSON.stringify({
